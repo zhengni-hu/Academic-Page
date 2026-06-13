@@ -449,3 +449,7 @@ footer {
   text-align: center;
   font-style: italic;
 }
+/* Test dark mode - add this temporarily */
+[data-theme="dark"] body {
+  background: red !important;
+}
