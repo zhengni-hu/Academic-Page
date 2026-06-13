@@ -152,72 +152,104 @@ footer {
   font-family: "STKaiti", "Kaiti SC", "楷体", "SimSun", "宋体", "Songti SC", "Noto Serif SC", serif;
   font-weight: normal;
 }
-/* ========== PUBLICATIONS STYLING ========== */
-.publication-list {
+/* ========== COMPACT PUBLICATIONS STYLING ========== */
+.publication-list.compact {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
-.publication-list li {
-  margin-bottom: 1.8rem;
-  padding-bottom: 1.2rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.publication-list li:last-child {
+.publication-list.compact li {
+  margin-bottom: 0.6rem;
+  padding: 0;
+  line-height: 1.5;
   border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
-.pub-title {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--text-primary);
-  margin-bottom: 0.25rem;
+.publication-list.compact li br {
+  display: none;
+}
+
+/* Inline elements for tight layout */
+.pub-authors,
+.pub-title,
+.pub-journal {
+  display: inline;
 }
 
 .pub-authors {
   font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.2rem;
+  color: #333;
+}
+
+.pub-title {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+}
+
+.pub-title:before {
+  content: " ",
 }
 
 .pub-journal {
   font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 0.3rem;
+  color: #555;
 }
 
-.pub-links {
-  margin-top: 0.3rem;
-}
-
+/* Dark blue links */
 .pub-link {
   display: inline-block;
   font-size: 0.8rem;
-  background: var(--bg-body);
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.4rem;
+  background: transparent;
+  border: none;
   text-decoration: none;
-  color: var(--link-color);
-  transition: all 0.2s ease;
+  color: #0a3d62;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .pub-link:hover {
-  background: var(--button-bg);
-  color: white;
-  border-color: var(--button-bg);
+  color: #1e6b9e;
+  text-decoration: underline;
+  background: transparent;
 }
 
-/* Separator between sections */
+/* Section headings */
 h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--border);
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1.5px solid #ddd;
   display: inline-block;
+}
+
+h3:first-of-type {
+  margin-top: 0;
+}
+
+/* Numbered list styling */
+.publication-list.compact {
+  counter-reset: pub-counter;
+}
+
+.publication-list.compact li {
+  counter-increment: pub-counter;
+  margin-bottom: 0.5rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.publication-list.compact li:before {
+  content: counter(pub-counter) ".";
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-size: 0.85rem;
 }
 
 /* ========== TALKS STYLING ========== */
