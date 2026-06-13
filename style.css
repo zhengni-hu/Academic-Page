@@ -143,3 +143,9 @@ footer {
     height: 180px;
   }
 }
+/* Add to your style.css */
+.chinese-name {
+  /* Priority: Kaishu first, then Songti, then generic serif */
+  font-family: "STKaiti", "Kaiti SC", "楷体", "SimSun", "宋体", "Songti SC", "Noto Serif SC", serif;
+  font-weight: normal;
+}
