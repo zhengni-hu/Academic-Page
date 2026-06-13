@@ -152,3 +152,70 @@ footer {
   font-family: "STKaiti", "Kaiti SC", "楷体", "SimSun", "宋体", "Songti SC", "Noto Serif SC", serif;
   font-weight: normal;
 }
+/* ========== PUBLICATIONS STYLING ========== */
+.publication-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.publication-list li {
+  margin-bottom: 1.8rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.publication-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.pub-journal {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.pub-links {
+  margin-top: 0.3rem;
+}
+
+.pub-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: var(--bg-body);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--link-color);
+  transition: all 0.2s ease;
+}
+
+.pub-link:hover {
+  background: var(--button-bg);
+  color: white;
+  border-color: var(--button-bg);
+}
+
+/* Separator between sections */
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--border);
+  display: inline-block;
+}
