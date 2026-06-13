@@ -60,14 +60,17 @@ main {
   gap: 42px;
 }
 
+
+/* Update your profile-photo styling in style.css */
 .profile-photo {
   width: 220px;
   height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #333;
+  border: none;           /* Remove the border */
+  background: transparent; /* Transparent background */
+  display: block;
 }
-
 h1 {
   font-size: 2.5rem;
   color: #1a1a1a;
