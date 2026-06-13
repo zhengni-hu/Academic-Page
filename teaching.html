@@ -7,6 +7,31 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
+  <script>
+  const toggleButton = document.getElementById('theme-toggle');
+  const savedTheme = localStorage.getItem('theme');
+  
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (toggleButton) toggleButton.innerHTML = '☀️ Light';
+  }
+  
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        toggleButton.innerHTML = '🌙 Dark';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggleButton.innerHTML = '☀️ Light';
+      }
+    });
+  }
+</script>
+  
 <body>
   <nav>
     <div class="nav-name">Zhengni Hu</div>
