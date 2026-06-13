@@ -334,3 +334,16 @@ h3:first-of-type {
   color: white;
   border-color: #0a3d62;
 }
+/* ====  CV part =====*/
+.info-table td {
+  padding: 0.5rem 0;
+  vertical-align: top;  /* This keeps the year at the top */
+}
+
+.info-label {
+  width: 110px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  vertical-align: top;  /* Year stays at top */
+}
